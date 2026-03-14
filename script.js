@@ -1,12 +1,6 @@
-// ============================================
-//  CANVA INDIA CLONE – script.js
-//  Mobile Menu + Interactive Behaviour
-// ============================================
-
 (function () {
   'use strict';
 
-  /* ---- DOM References ---- */
   const hamburgerBtn = document.getElementById('hamburgerBtn');
   const mobileMenu = document.getElementById('mobileMenu');
   const mobileOverlay = document.getElementById('mobileOverlay');
@@ -15,22 +9,15 @@
   const tabBtns = document.querySelectorAll('.tab-btn');
   const tmplTabs = document.querySelectorAll('.tmpl-tab');
 
-  // Mobile Templates Navigation References
   const mobileTemplatesDropdown = document.getElementById('mobileTemplatesDropdown');
   const mobileNavOverlay = document.getElementById('mobileNavOverlay');
   const closeMobileNav = document.getElementById('closeMobileNav');
-
-  /* ================================================
-     MOBILE MENU
-     - Opens on hamburger click
-     - Closes on X button, overlay click, or Escape key
-  ================================================ */
 
   function openMobileMenu() {
     mobileMenu.classList.add('open');
     mobileOverlay.classList.add('active');
     mobileMenu.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden'; // prevent scroll behind menu
+    document.body.style.overflow = 'hidden';
     hamburgerBtn.setAttribute('aria-expanded', 'true');
   }
 
@@ -58,14 +45,12 @@
     mobileOverlay.addEventListener('click', closeMobileMenu);
   }
 
-  /* Close on Escape key */
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
       closeMobileMenu();
     }
   });
 
-  /* Close on window resize if desktop breakpoint reached */
   window.addEventListener('resize', function () {
     if (window.innerWidth > 768 && mobileMenu.classList.contains('open')) {
       closeMobileMenu();
@@ -75,9 +60,6 @@
     }
   });
 
-  /* ================================================
-     MOBILE TEMPLATES DROPDOWN (BOTTOM SHEET)
-  ================================================ */
   if (mobileTemplatesDropdown && mobileNavOverlay) {
     mobileTemplatesDropdown.addEventListener('click', function () {
       mobileNavOverlay.classList.add('active');
@@ -101,7 +83,6 @@
     });
   }
 
-  /* Trap focus inside mobile menu when open */
   mobileMenu.addEventListener('keydown', function (e) {
     if (e.key !== 'Tab') return;
     const focusable = mobileMenu.querySelectorAll(
@@ -123,9 +104,6 @@
     }
   });
 
-  /* ================================================
-     NAVBAR – Add shadow on scroll
-  ================================================ */
   if (navbar) {
     window.addEventListener('scroll', function () {
       if (window.scrollY > 10) {
@@ -136,9 +114,6 @@
     }, { passive: true });
   }
 
-  /* ================================================
-     TOOLS TABS – Active state toggle
-  ================================================ */
   tabBtns.forEach(function (btn) {
     btn.addEventListener('click', function () {
       tabBtns.forEach(function (b) { b.classList.remove('active'); });
@@ -146,9 +121,6 @@
     });
   });
 
-  /* ================================================
-     TEMPLATE TABS – Active state toggle
-  ================================================ */
   tmplTabs.forEach(function (tab) {
     tab.addEventListener('click', function () {
       tmplTabs.forEach(function (t) { t.classList.remove('active'); });
@@ -156,9 +128,6 @@
     });
   });
 
-  /* ================================================
-     HERO SEARCH – Smooth interaction
-  ================================================ */
   const heroSearch = document.getElementById('heroSearch');
   const searchBox = document.querySelector('.hero-search-box');
 
@@ -173,9 +142,6 @@
     });
   }
 
-  /* ================================================
-     SMOOTH SCROLL LINKS
-  ================================================ */
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
       const target = document.querySelector(this.getAttribute('href'));
@@ -186,9 +152,6 @@
     });
   });
 
-  /* ================================================
-     INTERSECTION OBSERVER – Animate cards on scroll
-  ================================================ */
   const animatedEls = document.querySelectorAll(
     '.feature-card, .template-card, .stat-item'
   );
@@ -212,9 +175,6 @@
     });
   }
 
-  /* ================================================
-     HERO VIDEO – Play/Pause toggle button
-  ================================================ */
   const heroVideo = document.getElementById('heroVideo');
   const playBtn = document.getElementById('videoPlayBtn');
 
@@ -229,7 +189,6 @@
       }
     });
 
-    /* When video ends, reset button to play icon */
     heroVideo.addEventListener('ended', function () {
       playBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>';
     });
@@ -243,9 +202,6 @@
     });
   });
 
-  /* ================================================
-     TEMPLATES GRID SCROLL & VIDEO HOVER
-  ================================================ */
   const templatesNextBtn = document.getElementById('templatesNextBtn');
   const templatesGrid = document.getElementById('templatesGrid');
 
@@ -258,7 +214,6 @@
     });
   }
 
-  // Play/Pause videos on hover
   const templateVideos = document.querySelectorAll('.template-card video');
   templateVideos.forEach(video => {
     video.parentElement.addEventListener('mouseenter', () => {
@@ -270,22 +225,13 @@
     });
   });
 
-  /* ================================================
-     FOOTER ACCORDION (Mobile/Tablet)
-  ================================================ */
   const accordionHeaders = document.querySelectorAll('.accordion-header');
 
   accordionHeaders.forEach(header => {
     header.addEventListener('click', function () {
-      // Only run on mobile/tablet screens
       if (window.innerWidth <= 991) {
         const item = this.parentElement;
-        const isActive = item.classList.contains('active');
-
-        // Toggle active class on current item
         item.classList.toggle('active');
-        
-        // Accessibility: Toggle aria-expanded if needed (optional)
       }
     });
   });

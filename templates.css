@@ -5,8 +5,7 @@
     --text-main: #0e1217;
     --text-sub: #5e626d;
     --secondy-text-color: #8b3dff;
-    /* Added missing variable */
-    --border-color: #e2e5e9;
+    /* --border-color: #e2e5e9; */
     --hover-bg: #f2f3f5;
     --primary-gradient: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
     --sidebar-active: #f2f3f5;
@@ -121,7 +120,6 @@ body {
 
 .create-item:hover .create-btn-circle {
     background-color: #7d2ae8 !important;
-    /* Keep circle purple */
 }
 
 /* Specific Items */
@@ -261,7 +259,6 @@ body {
     color: #fff;
     text-decoration: underline;
     font-weight: 600;
-    /* Font size equivalent to weight 600 as requested */
 }
 
 .top-status-close {
@@ -287,10 +284,8 @@ body {
     font-weight: 600;
     color: #0e1217;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    /* Matched image shadow */
     transition: all 0.2s;
     height: 48px;
-    /* Increased height as requested */
 }
 
 .hero-trial-btn:hover {
@@ -452,7 +447,6 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
     background-color: #fff;
-    /* Default if not set inline */
 }
 
 .icon-navigation:hover .circle {
@@ -515,7 +509,6 @@ body {
 /* Specific Category Colors */
 .magic-layers {
     background-color: transparent;
-    /* Background removed as requested */
 }
 
 .presentation {
@@ -564,7 +557,6 @@ body {
 
 .magic-layers {
     background-color: transparent !important;
-    /* Removed background */
     box-shadow: none !important;
 }
 
@@ -687,7 +679,6 @@ body {
 
 .card-img {
     width: 120px;
-    /* Even larger image */
     height: 100px;
     position: absolute;
     right: 5px;
@@ -703,7 +694,6 @@ body {
     transform: scale(1.08) rotate(-2deg);
 }
 
-/* Specific Card Backgrounds from Reference */
 .card-insta-story {
     background-color: #fce4ec;
 }
@@ -796,9 +786,7 @@ body {
 
 .discover-section-row h2 {
     font-size: 20px;
-    /* Exact size adjustment */
     font-weight: 500;
-    /* As requested: font weight 500 */
     margin-bottom: 20px;
     color: #0e1217;
 }
@@ -1286,7 +1274,6 @@ body {
         color: #7d2ae8;
     }
 
-    /* Square Card Layout for Explore Templates (Mobile/Tablet) */
     .templates-grid {
         display: grid !important;
         grid-template-rows: repeat(2, auto) !important;

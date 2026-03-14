@@ -1,4 +1,3 @@
-/* Specific styles for the login page */
 .login-wrapper {
     position: relative;
     min-height: 100vh;
@@ -185,7 +184,6 @@
     gap: 6px;
 }
 
-/* --- Responsive Media Queries --- */
 
 @media (max-width: 768px) {
     .login-wrapper {

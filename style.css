@@ -57,7 +57,7 @@ button {
   font-family: inherit;
 }
 
-/* ---------- NAVBAR ---------- */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -89,7 +89,7 @@ button {
   overflow-wrap: break-word;
 }
 
-/* Desktop Logo */
+
 .nav-logo-desktop {
   flex-shrink: 0;
   display: flex;
@@ -103,7 +103,7 @@ button {
 
 
 
-/* Desktop Nav Links */
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -136,7 +136,7 @@ button {
   opacity: 0.6;
 }
 
-/* Nav Actions */
+
 .nav-actions {
   display: flex;
   align-items: center;
@@ -144,7 +144,7 @@ button {
   flex-shrink: 0;
 }
 
-/* Buttons */
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -179,12 +179,12 @@ button {
   background: var(--purple-dark);
 }
 
-/* Mobile nav bar (hidden on desktop) */
+
 .nav-mobile-bar {
   display: none;
 }
 
-/* ---------- MOBILE MENU ---------- */
+
 .mobile-overlay {
   position: fixed;
   inset: 0;
@@ -313,7 +313,7 @@ button {
   color: var(--purple);
 }
 
-/* Hamburger button */
+
 .hamburger-btn {
   display: flex;
   flex-direction: column;
@@ -331,7 +331,7 @@ button {
   transition: all 0.3s;
 }
 
-/* Mobile login button in header */
+
 .btn-mobile-login {
   padding: 8px 18px;
   font-size: 0.85rem;
@@ -341,7 +341,7 @@ button {
   border-radius: var(--radius-sm);
 }
 
-/* ---------- HERO SECTION ---------- */
+
 .hero {
   background: linear-gradient(180deg,
       var(--hero-grad-start) 0%,
@@ -440,7 +440,7 @@ button {
   display: block;
 }
 
-/* Play button overlay on video — no circle border */
+
 .video-play-btn {
   position: absolute;
   bottom: 12px;
@@ -468,7 +468,7 @@ button {
   margin-left: 2px;
 }
 
-/* Hero Search */
+
 .hero-search-wrap {
   width: 100%;
   max-width: 1200px;
@@ -548,7 +548,7 @@ button {
   background: rgba(255, 255, 255, 0.22);
 }
 
-/* ---------- EXPLORE SECTION ---------- */
+
 .explore-section {
   background: linear-gradient(180deg, #ffffff 0%, #ffffff 30%, #cfd9ff 70%, #ffffff 100%);
   padding: 28px 24px 24px;
@@ -570,7 +570,7 @@ button {
   line-height: 1.2;
 }
 
-/* Single pill-shaped container for all tabs */
+
 .explore-tabs-bar {
   display: flex;
   align-items: center;
@@ -591,7 +591,7 @@ button {
   display: none;
 }
 
-/* All tabs inside the bar */
+
 .explore-tab {
   padding: 9px 20px;
   font-family: 'DM Sans', 'Inter', sans-serif;
@@ -612,7 +612,7 @@ button {
   background: rgba(0, 0, 0, 0.04);
 }
 
-/* Active tab — gradient pill */
+
 .explore-tab.active {
   background: linear-gradient(90deg, #6236e0 0%, #8b5cf6 100%);
   color: #fff;
@@ -623,7 +623,7 @@ button {
   box-shadow: 0 2px 8px rgba(98, 54, 224, 0.35);
 }
 
-/* ---------- FEATURES SECTION ---------- */
+
 .features-section {
   padding: 32px 24px;
   max-width: 1400px;
@@ -644,7 +644,7 @@ button {
   display: none; /* Hide scrollbar for Chrome/Safari */
 }
 
-/* Base card */
+
 .feature-card {
   border-radius: 24px;
   overflow: hidden;
@@ -659,7 +659,7 @@ button {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
-/* Card text area */
+
 .card-text {
   position: relative;
   z-index: 2;
@@ -708,7 +708,7 @@ button {
   background: rgba(255, 255, 255, 0.75);
 }
 
-/* ---- Card 1: Coral AI card (large, spans full height) ---- */
+
 .card-red {
   background: #ef5c6e;
   color: #fff;
