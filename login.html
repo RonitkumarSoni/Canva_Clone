@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login into your Canva account</title>
+    <link rel="icon"
+        href="https://cdn.prod.website-files.com/6684ada223dcc00b92870639/66a5a2b3fa25c416060e1ed6_canva%20icon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="media-query.css" />
+</head>
+
+<body>
+    <div class="login-wrapper">
+        <!-- Background Image -->
+        <div class="login-bg-image"
+            style="background-image: url('https://static.canva.com/web/images/002d737e30b90787006afee36ee53149.jpg');">
+        </div>
+
+        <a href="index.html" class="login-logo">
+            <img src="https://static.canva.com/web/images/8439b51bb7a19f6e65ce1064bc37c197.svg" alt="Canva">
+        </a>
+
+        <div class="login-modal">
+            <h1>Log in or sign up in seconds</h1>
+            <p>Use your email or another service to continue with Canva (it's free!)</p>
+
+            <div class="login-btn-group">
+                <button class="login-btn" onclick="window.location.href='#'">
+                    <div class="login-btn-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                    </div>
+                    Continue with phone number
+                </button>
+
+                <button class="login-btn" onclick="window.location.href='#'">
+                    <div class="login-btn-icon">
+                        <img src="https://www.gstatic.com/images/branding/product/2x/googleg_48dp.png" alt="Google">
+                    </div>
+                    Continue with Google
+                </button>
+
+                <button class="login-btn" onclick="window.location.href='#'">
+                    <div class="login-btn-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    Continue with email
+                </button>
+            </div>
+
+            <a href="#" class="another-way">Continue another way</a>
+
+            <div class="login-legal">
+                By continuing, you agree to Canva's <a href="#">Terms of Use</a>. Read our <a href="#">Privacy
+                    Policy</a>.
+            </div>
+
+            <a href="#" class="business-signup">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 21h18"></path>
+                    <path d="M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7H3"></path>
+                    <path d="M19 21v-4a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v4"></path>
+                    <rect x="9" y="2" width="6" height="4" rx="1"></rect>
+                </svg>
+                Signing up for a business
+            </a>
+        </div>
+
+        <div class="login-footer-nav">
+            <a href="#">Privacy policy</a>
+            <span>|</span>
+            <a href="#">Terms</a>
+            <span>|</span>
+            <div class="lang-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                    </path>
+                </svg>
+                English (India)
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

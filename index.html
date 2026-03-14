@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canva India – Visual Suite For Everyone </title>
+  <meta name="description"
+    content="Canva makes it easy to create and share professional designs. Use templates, free images, and AI-powered tools." />
+  <link rel="icon"
+    href="https://cdn.prod.website-files.com/6684ada223dcc00b92870639/66a5a2b3fa25c416060e1ed6_canva%20icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="media-query.css" />
+</head>
+
+<body>
+
+  <!-- ========== NAVBAR (DESKTOP) ========== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <!-- Mobile: hamburger + logo + login -->
+      <div class="nav-mobile-bar">
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+        <a href="#" class="nav-logo-mobile">
+          <img src="https://static.canva.com/web/images/8439b51bb7a19f6e65ce1064bc37c197.svg" alt="Canva" />
+        </a>
+        <a href="login.html" class="btn btn-login btn-mobile-login" id="mobileLoginBtn">Log in</a>
+      </div>
+
+      <!-- Desktop nav -->
+      <a href="#" class="nav-logo-desktop">
+        <img src="https://static.canva.com/web/images/8439b51bb7a19f6e65ce1064bc37c197.svg" alt="Canva" />
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="templates.html" class="nav-link">Design</a>
+        <a href="#" class="nav-link">Product</a>
+        <a href="#" class="nav-link">Plans</a>
+        <a href="#" class="nav-link">Business</a>
+        <a href="#" class="nav-link">Education</a>
+        <a href="#" class="nav-link">Help</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-signup">Sign up</a>
+        <a href="login.html" class="btn btn-login">Log in</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== MOBILE MENU OVERLAY ========== -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- ========== MOBILE MENU SIDEBAR ========== -->
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true" role="dialog" aria-label="Mobile navigation">
+    <div class="mobile-menu-header">
+      <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu">&#10005;</button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="#" class="mobile-nav-item">Design <span class="mobile-chevron">&#8250;</span></a>
+      <a href="#" class="mobile-nav-item">Product <span class="mobile-chevron">&#8250;</span></a>
+      <a href="#" class="mobile-nav-item">Plans <span class="mobile-chevron">&#8250;</span></a>
+      <a href="#" class="mobile-nav-item">Business <span class="mobile-chevron">&#8250;</span></a>
+      <a href="#" class="mobile-nav-item">Education <span class="mobile-chevron">&#8250;</span></a>
+      <a href="#" class="mobile-nav-item">Help <span class="mobile-chevron">&#8250;</span></a>
+    </nav>
+    <div class="mobile-menu-footer">
+      <a href="login.html" class="btn btn-mobile-menu-login">Log in</a>
+      <a href="login.html" class="btn btn-mobile-menu-signup">Sign up</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h3 class="hero-title">Where heart meets art</h3>
+          <p class="hero-subtitle">Canva makes it easy to create and share professional designs.</p>
+          <a href="templates.html" class="btn btn-hero-cta">Sign up and start designing</a>
+        </div>
+        <div class="hero-image-wrap">
+          <div class="hero-mockup" id="heroMockup">
+            <video class="hero-mockup-video" id="heroVideo" muted loop playsinline
+              poster="https://content-management-files.canva.com/e5347681-c825-4aa7-aff3-e8475b578ba7/CanvaThumbnails_JaaduDaadu_Final_Artboard2copy2_1920_resize.jpg">
+              <source
+                src="https://content-management-files.canva.com/f521ebb2-bf15-4e2b-9085-9979b16a4362/canva_jadu_dadu_hin_16_9.mp4"
+                type="video/mp4">
+            </video>
+            <!-- Play button overlay -->
+            <button class="video-play-btn" id="videoPlayBtn" aria-label="Play video">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                <polygon points="5,3 19,12 5,21" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TEMPLATES / EXPLORE SECTION ========== -->
+    <section class="explore-section" id="explore">
+      <div class="explore-container">
+        <h2 class="explore-heading">Explore Canva's Templates and AI Tools</h2>
+        <!-- Single pill-bar tab container like reference image -->
+        <div class="explore-tabs-bar">
+          <button class="explore-tab active" data-tab="try">Try it now</button>
+          <button class="explore-tab" data-tab="ai">AI</button>
+          <button class="explore-tab" data-tab="presentation">Presentation</button>
+          <button class="explore-tab" data-tab="social">Social Media</button>
+          <button class="explore-tab" data-tab="print">Print</button>
+          <button class="explore-tab" data-tab="video">Video</button>
+          <button class="explore-tab" data-tab="education">Education</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FEATURE CARDS GRID ========== -->
+    <section class="features-section">
+      <div class="features-grid">
+
+        <!-- Card 1: AI - Large coral -->
+        <div class="feature-card card-red">
+          <video autoplay loop muted playsinline>
+            <source
+              src="https://content-management-files.canva.com/fbd599e2-8bae-40e1-91a0-628a9182c09d/Recommended_DreamLab_Desktop2.mp4"
+              type="video/mp4">
+          </video>
+          <div class="card-text">
+            <h3>Watch your words turn into production-quality visuals with AI</h3>
+            <a href="#" class="btn btn-card-outline">Generate media</a>
+          </div>
+        </div>
+
+        <!-- Card 2: Remove BG - Yellow/Beige -->
+        <div class="feature-card card-yellow">
+          <div class="card-text">
+            <h3>Bye-bye background, in a single click</h3>
+            <a href="#" class="btn btn-card-outline-dark">Remove background</a>
+          </div>
+        </div>
+
+        <!-- Card 3: Presentations - Pink/Magenta -->
+        <div class="feature-card card-pink">
+          <div class="card-text">
+            <h3>Design, present &amp; inspire with presentations</h3>
+            <a href="#" class="btn btn-card-outline-dark">Start designing</a>
+          </div>
+        </div>
+
+        <!-- Card 4: Social Media - Blue/Indigo -->
+        <div class="feature-card card-blue">
+          <div class="card-text">
+            <h3>Create scroll-stopping social media content for any platform</h3>
+            <a href="#" class="btn btn-card-outline-dark">Design for social media</a>
+          </div>
+        </div>
+
+        <!-- Card 5: Video - Teal -->
+        <div class="feature-card card-teal">
+          <div class="card-text">
+            <h3>Make your videos look awesome on any screen</h3>
+            <a href="#" class="btn btn-card-outline-dark">Create a video</a>
+          </div>
+        </div>
+
+        <!-- Card 6: Image editor - Orange -->
+        <div class="feature-card card-orange">
+          <div class="card-text">
+            <h3>Make easy edits with an AI-powered editor</h3>
+            <a href="#" class="btn btn-card-outline-dark">Edit an image</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== AI IMAGE GENERATOR SECTION ========== -->
+    <section class="ai-gen-section">
+      <div class="ai-gen-container">
+        <div class="ai-gen-content">
+          <h2 class="ai-gen-heading">Try Image Generator</h2>
+          <p class="ai-gen-subtext">
+            Turn pure text to art with Magic Media™ and our range of AI art generator tools. Simply enter a prompt, pick
+            a style, and watch your words transform into beautiful art.
+          </p>
+
+          <div class="ai-gen-prompt-wrapper">
+            <div class="ai-gen-prompt-bar">
+              <span class="ai-prompt-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </span>
+              <input type="text" class="ai-gen-input" value="Moon rising over the mountains" readonly>
+              <button class="ai-prompt-clear" aria-label="Clear">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <button class="btn btn-ai-generate">Generate</button>
+          </div>
+        </div>
+
+        <div class="ai-gen-visual">
+          <div class="ai-gen-main-img">
+            <img
+              src="https://content-management-files.canva.com/3311a434-e06b-4cda-bebd-2e11ebedf7ee/AIgenerator_Dreamy_Moonrisingoverthemountains.png"
+              alt="Moon rising over the mountains">
+          </div>
+
+          <div class="ai-gen-style-selector">
+            <div class="style-thumb-item active">
+              <div class="style-thumb">
+                <img
+                  src="https://content-management-files.canva.com/3311a434-e06b-4cda-bebd-2e11ebedf7ee/AIgenerator_Dreamy_Moonrisingoverthemountains.png"
+                  alt="Dreamy">
+              </div>
+              <span>Dreamy</span>
+            </div>
+            <div class="style-thumb-item">
+              <div class="style-thumb" style="filter: saturate(1.5);">
+                <img
+                  src="https://content-management-files.canva.com/3311a434-e06b-4cda-bebd-2e11ebedf7ee/AIgenerator_Dreamy_Moonrisingoverthemountains.png"
+                  alt="Anime">
+              </div>
+              <span>Anime</span>
+            </div>
+            <div class="style-thumb-item">
+              <div class="style-thumb" style="filter: grayscale(0.5);">
+                <img
+                  src="https://content-management-files.canva.com/3311a434-e06b-4cda-bebd-2e11ebedf7ee/AIgenerator_Dreamy_Moonrisingoverthemountains.png"
+                  alt="Watercolor">
+              </div>
+              <span>Watercolor</span>
+            </div>
+            <div class="style-thumb-item">
+              <div class="style-thumb" style="filter: contrast(1.2);">
+                <img
+                  src="https://content-management-files.canva.com/3311a434-e06b-4cda-bebd-2e11ebedf7ee/AIgenerator_Dreamy_Moonrisingoverthemountains.png"
+                  alt="Filmic">
+              </div>
+              <span>Filmic</span>
+            </div>
+            <div class="style-thumb-item style-more">
+              <div class="style-thumb-more">
+                <span>20+</span>
+              </div>
+              <span>More</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== BUSINESS FEATURES SECTION ========== -->
+    <section class="business-features-section">
+      <div class="business-container">
+        <h2 class="business-heading">Our Business Features</h2>
+        <p class="business-subtext">
+          Enhance the design capabilities of your team or your entire business with Canva's business plans!
+          To enquire about our Enterprise plan, please contact us <a href="#" class="business-link">here!</a>
+        </p>
+
+        <div class="business-grid">
+          <!-- Card 1 -->
+          <div class="business-card card-biz-1">
+            <div class="biz-card-image"></div>
+            <div class="biz-card-content">
+              <h3>Set up a Brand Kit to unify your designs</h3>
+              <a href="#" class="btn btn-biz-outline">Learn more</a>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="business-card card-biz-2">
+            <div class="biz-card-image"></div>
+            <div class="biz-card-content">
+              <h3>Empower your team to scale content</h3>
+              <a href="#" class="btn btn-biz-outline">Learn more</a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="business-card card-biz-3">
+            <div class="biz-card-image"></div>
+            <div class="biz-card-content">
+              <h3>Collaborate &amp; create in real time</h3>
+              <a href="#" class="btn btn-biz-outline">View plans</a>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="business-card card-biz-4">
+            <div class="biz-card-image"></div>
+            <div class="biz-card-content">
+              <h3>Protect your team's data and keep it safe</h3>
+              <a href="#" class="btn btn-biz-outline">Learn more</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="business-arrow-next" id="bizNextBtn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TEMPLATES SECTION ========== -->
+    <section class="templates-section">
+      <div class="templates-header">
+        <h2>Templates for absolutely anything</h2>
+        <button class="btn btn-browse-templates">Browse all templates</button>
+      </div>
+
+      <div class="templates-wrapper">
+        <div class="templates-grid" id="templatesGrid">
+          <!-- Row 1 -->
+          <div class="templates-row">
+            <div class="template-card card-potrait">
+              <img
+                src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS3P6gjgvrAPEixGADaReZPKZM0sXIzv3jmET84kJtTI8sBmmXo"
+                alt="Kitty Party">
+            </div>
+            <div class="template-card card-potrait">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHvaWRUi1TqUorRhV1VmisVvSXuiZ6EQS1a5iWh2hYXAHX00F8"
+                alt="Ganesh Chaturthi">
+            </div>
+            <div class="template-card card-potrait">
+              <img
+                src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQkEPM2gJn-c-osTJBueYKhs-UkL8ykumO5d_SuXdu-qvUFva8E"
+                alt="Shubh Diwali">
+            </div>
+            <div class="template-card card-potrait card-video">
+              <video muted loop playsinline>
+                <source src="https://template.canva.com/EAGV_liXQP4/1/0/286w-JzIFGVRNnGI.mp4" type="video/mp4">
+              </video>
+              <div class="play-overlay">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+            <div class="template-card card-potrait">
+              <img src="https://template.canva.com/EAFuGyHCbos/1/0/286w-bLuFAmYf2gw.jpg" alt="Invitation">
+            </div>
+            <div class="template-card card-potrait">
+              <img src="https://template.canva.com/EAF5ZGr9MMo/3/0/283w-88TOvdgDEMU.jpg" alt="Republic Day">
+            </div>
+            <div class="template-card card-potrait">
+              <img src="https://template.canva.com/EAGOeX7rcwk/3/0/309w-DiukDu9Nwvs.jpg" alt="Food Inventory">
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="templates-row">
+            <div class="template-card card-landscape">
+              <img
+                src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT7PoYf5ehZ7D_7cAK5IFOULuRPjrOmYJPTeQ0EecyeJzCBk_hj"
+                alt="Happy Holi">
+            </div>
+            <div class="template-card card-potrait card-video">
+              <video muted loop playsinline>
+                <source src="https://template.canva.com/EAFweJ1hH78/1/0/225w-YE0mH99wawU.mp4">
+              </video>
+              <div class="play-overlay">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+            <div class="template-card card-potrait">
+              <img src="https://template.canva.com/EAGWL6Wv5QM/1/0/283w-Ga_6oecdrcE.jpg" alt="Save Water">
+            </div>
+            <div class="template-card card-potrait">
+              <img src="https://template.canva.com/EAGf8YltFj4/1/0/284w-66-gKiwoIl0.jpg" alt="Meenakshi">
+            </div>
+            <div class="template-card card-potrait">
+              <img src="https://template.canva.com/EAF3eHyrcjs/1/0/300w-RfqMT92P6C4.jpg" alt="Cyber Caution">
+            </div>
+            <div class="template-card card-potrait">
+              <img src="https://template.canva.com/EAGWeXwnVIc/1/0/283w-HTz72bCDwxw.jpg" alt="Awareness">
+            </div>
+          </div>
+        </div>
+
+        <div class="templates-arrow-next" id="templatesNextBtn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER PROMO SECTION ========== -->
+  <section class="footer-promo">
+    <div class="promo-container">
+      <p class="promo-text">
+        Unlock premium templates, more powerful design tools & AI features with a Canva plan.
+        <a href="#" class="promo-link">Educational institutions</a> and
+        <a href="#" class="promo-link">non-profits</a> can use Canva's premium features for free.
+      </p>
+      <button class="btn btn-plans-pricing">
+        <svg class="crown-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M5 16L3 5L8.5 10L12 4L15.5 10L21 5L19 16H5M19 19C19 19.6 18.6 20 18 20H6C5.4 20 5 19.6 5 19V18H19V19Z" />
+        </svg>
+        See plans and pricing
+      </button>
+    </div>
+  </section>
+
+  <!-- ========== NEW FOOTER ========== -->
+  <footer class="main-footer">
+    <div class="footer-grid">
+      <!-- Logo & Download Column -->
+      <div class="footer-brand-col">
+        <a href="#" class="footer-logo-main">
+          <img src="https://static.canva.com/web/images/8439b51bb7a19f6e65ce1064bc37c197.svg" alt="Canva">
+        </a>
+        <p class="download-text">Download Canva for free</p>
+        <div class="download-badges">
+          <a href="#" class="badge-link">
+            <img src="https://content-management-files.canva.com/4903e07f-26e6-4159-87e0-c11d49cb38b3/GetItOnGooglePlay_Badge_Web_color_en-IN.svg" alt="Get it on Google Play">
+          </a>
+          <a href="#" class="badge-link">
+            <img src="https://content-management-files.canva.com/2eda2796-efb5-46ec-9d34-4631aa75d8b3/Download_on_the_App_Store_Badge_en-IN.svg" alt="Download on the App Store">
+          </a>
+        </div>
+      </div>
+
+      <!-- Links Columns -->
+      <div class="footer-links-grid">
+        <!-- 1. Product -->
+        <div class="footer-column accordion-item">
+          <div class="accordion-header">
+            <h3>Product</h3>
+            <span class="accordion-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </span>
+          </div>
+          <ul class="accordion-content">
+            <li><a href="#">Social media</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Print</a></li>
+            <li><a href="#">Apps Marketplace</a></li>
+            <li><a href="#">Affinity ↗</a></li>
+            <li><a href="#">Template library</a></li>
+            <li><a href="#">Design Trends</a></li>
+          </ul>
+        </div>
+
+        <!-- 2. About -->
+        <div class="footer-column accordion-item">
+          <div class="accordion-header">
+            <h3>About</h3>
+            <span class="accordion-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </span>
+          </div>
+          <ul class="accordion-content">
+            <li><a href="#">Social impact</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Case studies</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- 3. Plans -->
+        <div class="footer-column accordion-item">
+          <div class="accordion-header">
+            <h3>Plans</h3>
+            <span class="accordion-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </span>
+          </div>
+          <ul class="accordion-content">
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Pro</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">Enterprise</a></li>
+            <li><a href="#">Education</a></li>
+            <li><a href="#">Higher education</a></li>
+            <li><a href="#">Nonprofits</a></li>
+            <li><a href="#">Contact Sales</a></li>
+          </ul>
+        </div>
+
+        <!-- 4. Help -->
+        <div class="footer-column accordion-item">
+          <div class="accordion-header">
+            <h3>Help</h3>
+            <span class="accordion-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </span>
+          </div>
+          <ul class="accordion-content">
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Enterprise services</a></li>
+            <li><a href="#">Design School ↗</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+
+        <!-- 5. Community -->
+        <div class="footer-column accordion-item">
+          <div class="accordion-header">
+            <h3>Community</h3>
+            <span class="accordion-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </span>
+          </div>
+          <ul class="accordion-content">
+            <li><a href="#">Canva Communities</a></li>
+            <li><a href="#">Creators</a></li>
+            <li><a href="#">Affiliates</a></li>
+            <li><a href="#">Canva Represents Fund</a></li>
+            <li><a href="#">Content partners</a></li>
+            <li><a href="#">Business partner directory</a></li>
+            <li><a href="#">Canva Developers ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Row -->
+    <div class="footer-bottom-row">
+      <div class="bottom-left">
+        <div class="language-selector">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span>English (India)</span>
+        </div>
+        <div class="footer-social-icons">
+          <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+            </svg></a>
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg></a>
+          <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg></a>
+          <a href="#" aria-label="Pinterest"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2C6.47 2 2 6.47 2 12c0 4.25 2.66 7.87 6.41 9.29-.08-.79-.15-2 .03-2.86.16-.69 1.05-4.45 1.05-4.45s-.27-.54-.27-1.34c0-1.25.73-2.19 1.63-2.19.77 0 1.14.58 1.14 1.27 0 .77-.49 1.93-.74 3-.21.89.45 1.62 1.32 1.62 1.59 0 2.81-1.67 2.81-4.08 0-2.13-1.54-3.61-3.71-3.61-2.53 0-4.01 1.9-4.01 3.86 0 .77.3 1.58.67 2.03.07.09.08.17.06.26l-.25 1.03c-.04.16-.13.2-.3.12-1.12-.52-1.82-2.16-1.82-3.48 0-2.83 2.06-5.43 5.93-5.43 3.11 0 5.53 2.22 5.53 5.18 0 3.09-1.95 5.58-4.66 5.58-.91 0-1.76-.47-2.06-.1.1-.38 1.05-4 1.05-4z" />
+            </svg></a>
+          <a href="#" aria-label="X (Twitter)"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg></a>
+          <a href="#" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2C5.12 19.5 12 19.5 12 19.5s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33zM9.75 15.02V8.48l5.72 3.27-5.72 3.27z" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="bottom-right">
+        <div class="legal-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+        <p class="copyright">© 2026 All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
